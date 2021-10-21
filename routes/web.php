@@ -12,7 +12,30 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//view all links
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/links',function(){});
+
+// view a single link
+
+Route::get('/links/{name}',function($name){});
+
+// Create a link( show a form)
+
+Route::get('/links/create', function($name){});
+
+// Create a link ( processs the form)
+
+Route::post('/link/{name}', function($name){});
+
+
+// edit/update a link ( view form)
+Route::get('/links/{name}',function($name){});
+
+
+// edit/update a link ( process the form)
+Route::patch('/links/{name}',function($name){});
+
+// delete a link 
+
+Route::delete('/links/{name}', function($name){});
